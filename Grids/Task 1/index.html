@@ -50,6 +50,12 @@
             grid-column: 1/7;
             grid-row: 4/5;
         }
+        .nested{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 5px;
+            align-items: center;
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,7 +64,12 @@
 </head>
 <body>
     <div id = "content">
-        <div class="one">1</div>
+        <div class="one nested">
+            <p>A</p>
+            <p>B</p>
+            <p>C</p>
+            <p>D</p>
+        </div>
         <div class="two">2</div>
         <div class="three">3</div>
         <div class="four">4</div>
