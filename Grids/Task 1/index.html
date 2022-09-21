@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            color: #ffffff;
+            font-family: Arial;
+            text-align: center;
+        }
+        #content{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,minmax(200px,auto));
+            grid-gap: 10px;
+            width: 90vw;
+            margin: 0 auto;
+        }
+        #content div{
+            background-color: #3bbced;
+            padding: 30px;
+        }
+        #content div:nth-child(even){
+            background-color: #777;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 1</title>
+</head>
+<body>
+    <div id = "content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>
