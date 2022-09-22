@@ -1,78 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <style>
-        body{
-            color: #ffffff;
-            font-family: Arial;
-            text-align: center;
-        }
-        #content{
-            display: grid;
-            grid-template-columns: repeat(12,1fr);
-            grid-template-rows: minmax(100px, auto);
-            grid-gap: 10px;
-            max-width: 960px;
-            margin: 0 auto;
-            position: relative;
-        }
-        #content >*{
-            background-color: #3bbced;
-            padding: 30px;
-        }
-        header{
-            grid-column: 1/13;
-        }
-        main{
-            grid-column: 4/13;
-            grid-row: 2/4;
-        }
-        aside{
-            grid-column: 1/4
-        }
-        section{
-            grid-column: 1/13;
-            grid-row: 4/6;
-        }
-        nav{
-            grid-column: 1/4;
-        }
-        footer{
-            grid-column: 1/13;
-        }
-        #grid{
-            display: grid;
-            position: absolute;
-            top:0;
-            left:0;
-            grid-template-columns: repeat(12,1fr);
-            grid-template-rows: minmax(100%, auto);
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            padding: 0;
-        }
-        #grid p{
-            border: 1px solid;
-            background: #000;
-            margin: 0;
-            opacity: 0.2;
-        }
-        input:checked + #content #grid{
-            display: grid;
-        }
-    </style>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grid 2 - 12 Coloumn Grid</title>
-</head>
-<body>
+  </head>
+  <body>
     <input type="checkbox" />
-    <div id = "content">
-        <div id="grid">
-            <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
-        </div>
+    <div id="content">
+      <div id="grid">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
       <header>Header</header>
       <main>Main</main>
       <section>Section</section>
@@ -80,5 +31,5 @@
       <nav>Nav</nav>
       <footer>Footer</footer>
     </div>
-</body>
+  </body>
 </html>
