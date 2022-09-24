@@ -4,21 +4,35 @@ body {
 }
 
 #header {
-  margin: 3px 70px 3px 70px;
+  margin: 5px 70px 0px 70px;
   display: flex;
   justify-content: space-between;
+  background-color: #ffffff;
 }
 
 #logo {
-  width: 13em;
-  height: 3.25em;
-  padding-top: 5px;
+  width: 12em;
+  height: 3em;
+  padding-top: 10px;
 }
 
 #moto {
   color: #7c7476;
   font-size: 18px;
-  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inline {
+  display: flex;
 }
 
 #orange-candidate,
@@ -45,32 +59,36 @@ body {
   margin-left: 10px;
 }
 
+#orange-doctor:hover {
+  background-color: #f18a79;
+  border-color: #f18a79;
+  color: #fffffff1;
+}
+
 #orange-candidate {
   color: #ee6d57;
   background-color: #ffffff;
 }
 
+#orange-candidate:hover {
+  color: #f18a79f1;
+  border-color: #f18a79f1;
+}
+
 #grey-navs {
   background-color: #f8f8f8;
-  padding: 3px 70px 3px 70px;
+  padding: 3px 75px 3px 75px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #e0e0e0;
 }
 
-.inline {
-  display: flex;
-}
-
-.grey-navs-content {
-  display: flex;
-}
-
-.grey-navs-content > * {
+.grey-navs-contents {
   padding: 15px 40px 15px 0px;
-  font-weight: 550;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 15px;
   color: #404041;
+  position: relative;
 }
 
 .doctorPatient {
@@ -82,9 +100,9 @@ body {
 .mainArea {
   display: flex;
   justify-content: space-between;
-  padding: 90px 0px 90px 80px;
-  height: 80vh;
-  width: 80vw;
+  padding: 70px 0px 70px 70px;
+  height: 90vh;
+  width: 85vw;
 }
 
 .mainText {
@@ -94,10 +112,13 @@ body {
 }
 
 .mainText1 {
-  font-weight: 600;
-  font-size: 35px;
+  font-weight: bold;
+  font-size: 40px;
   padding-top: 100px;
   padding-bottom: 15px;
+  font-family: Cambria;
+  font-weight: 700;
+  color: #404041;
 }
 
 .mainText2 {
@@ -117,4 +138,42 @@ body {
   padding: 15px 20px 15px 20px;
   max-height: 30px;
   width: fit-content;
+}
+
+#green-candidate:hover {
+  background-color: #90ceda;
+  border-color: #90ceda;
+  color: #fcfbf7;
+}
+
+.drop-down-menu {
+  display: none;
+  position: absolute;
+  margin-top: 18px;
+  padding: 5px 19px 5px 19px;
+  border: 1px solid #e0e0e0;
+  background-color: #f8f8f8;
+}
+
+.drop-down-display:hover div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: auto;
+  height: auto;
+}
+
+a {
+  color: #404041;
+  text-decoration: none;
+  display: block;
+}
+
+.drop-down-text {
+  white-space: nowrap;
+  padding: 13px 0px 13px 0px;
+}
+
+.drop-down-text:hover {
+  color: #ee6d57;
 }
