@@ -1,5 +1,8 @@
+@font-face {
+  font-family: "Rocoleta";
+  src: url("./fonts/recoleta-regulardemo.otf") format("opentype");
+}
 body {
-  scrollbar-width: none;
   font-family: sans-serif;
   margin: 0;
 }
@@ -9,7 +12,7 @@ body::-webkit-scrollbar {
 }
 
 #header {
-  margin: 5px 70px 0px 70px;
+  padding: 0px 70px 0px 70px;
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
@@ -41,30 +44,34 @@ body::-webkit-scrollbar {
 }
 
 #orange-candidate,
-#orange-doctor {
+.orange-doctor {
   border: 2px solid #ee6d57;
   border-radius: 5px;
   font-weight: 550;
   font-size: 15px;
-  display: flex;
   align-items: center;
   max-height: 30px;
   padding: 5px 20px 5px 20px;
+  width: fit-content;
 }
 
 #orange-buttons {
-  display: inline-flex;
   justify-content: space-between;
   margin: 10px;
 }
 
-#orange-doctor {
+.orange-doctor {
+  color: #ffffff;
+  background-color: #ee6d57;
+}
+
+.doctor-1 {
   color: #ffffff;
   background-color: #ee6d57;
   margin-left: 10px;
 }
 
-#orange-doctor:hover {
+.orange-doctor:hover {
   background-color: #f18a79;
   border-color: #f18a79;
   color: #fffffff1;
@@ -83,7 +90,6 @@ body::-webkit-scrollbar {
 .grey-navs {
   background-color: #f8f8f8;
   padding: 3px 75px 3px 75px;
-  display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -99,11 +105,9 @@ body::-webkit-scrollbar {
 .doctorPatient {
   width: 45vw;
   height: 70vh;
-  object-fit: contain;
 }
 
 .mainArea {
-  display: flex;
   justify-content: space-between;
   padding: 70px 0px 70px 70px;
   height: 70vh;
@@ -111,25 +115,42 @@ body::-webkit-scrollbar {
 }
 
 .mainText {
-  display: flex;
   flex-direction: column;
   padding: 8vh 0vw 2vh 8vw;
 }
 
-.mainText1 {
+#mainText1,
+#main-text-2,
+#main-text-3,
+#main-text-4,
+#main-text-5,
+#main-text-6,
+#main-text-7,
+#main-text-8 {
+  font-family: "Rocoleta";
+  font-weight: 900;
+  color: #404041;
   font-weight: bold;
   font-size: 40px;
-  padding-top: 100px;
-  padding-bottom: 15px;
-  font-family: Cambria;
-  font-weight: 700;
-  color: #404041;
 }
 
-.mainText2 {
+#mainText1 {
+  padding-top: 100px;
+  padding-bottom: 15px;
+}
+
+#subText1,
+#sub-text-2,
+#sub-text-3,
+#sub-text-5,
+#sub-text-6,
+#sub-text-7 {
   color: #404041;
   font-weight: 200;
   font-size: 18px;
+}
+
+#subText1 {
   padding: 10px 10px 50px 0px;
 }
 
@@ -226,4 +247,210 @@ a {
 #award_7 {
   width: 60px;
   height: 20px;
+}
+
+#main-area-2 {
+  height: 75vh;
+  width: 95vw;
+  padding: 10px;
+}
+
+#orthofx_bathroom_07-1 {
+  width: 60vw;
+  height: 75vh;
+}
+
+#main-text-area-2 {
+  padding: 200px 0px 0px 100px;
+  flex-direction: column;
+}
+
+#sub-text-2 {
+  line-height: 2em;
+  padding-top: 2vh;
+  color: #404041;
+  margin-right: 10vw;
+}
+
+#main-area-3 {
+  padding: 0px 30px 50px 30px;
+}
+
+#main-text-area-3 {
+  width: 50vw;
+  height: 70vh;
+  flex-direction: column;
+  margin: 17vh 14vw 17vh 3vw;
+}
+
+#sub-text-3 {
+  line-height: 2em;
+  padding-top: 2vh;
+  color: #404041;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon-list {
+  margin-top: 1em;
+}
+
+.doctor-2 {
+  padding: 15px 20px 15px 20px;
+  margin-top: 1em;
+}
+
+#main-area-4 {
+  background-color: #74c2d1;
+  color: #ffffff;
+}
+
+#aligner-case {
+  width: 50vw;
+  height: 90vh;
+}
+
+.text-area-4 {
+  padding: 4em 15em 0em 5em;
+}
+#main-text-4 {
+  color: #ffffff;
+  padding-bottom: 0.5em;
+}
+
+.sub-text-4 {
+  font-weight: bold;
+  padding-bottom: 0.25em;
+}
+
+.sub-sub-text-4 {
+  padding-right: 4em;
+  padding-bottom: 2em;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 2em;
+}
+
+#main-area-5 {
+  padding: 4em 10em 4em 5em;
+}
+
+#Girl_Teal-Shirt-1024x873 {
+  height: 70vh;
+  width: 40vw;
+}
+
+#main-text-area-5 {
+  padding: 3em 5em 3em 7em;
+}
+
+#main-text-5 {
+  padding-bottom: 0.5em;
+}
+
+#sub-text-5 {
+  padding-right: 4em;
+  padding-bottom: 2em;
+  line-height: 2em;
+}
+
+.sub-sub-text-5 {
+  align-items: center;
+  padding: 1em 0em 0.5em 0em;
+}
+
+.red,
+.blue,
+.yellow,
+.black {
+  margin-right: 0.5em;
+}
+.red {
+  color: #f48471;
+}
+
+.blue {
+  color: #74c2d1;
+}
+
+.yellow {
+  color: #fec16e;
+}
+
+.how-it-works-button {
+  padding: 15px 20px 15px 20px;
+  margin-top: 2em;
+}
+
+#main-area-6 {
+  background-color: #f4f9fa;
+}
+
+#text-area-6 {
+  padding: 10em 14em 9em 4em;
+  flex-direction: column;
+}
+
+#FXOnTrack-Image {
+  width: 50vw;
+  height: 36vw;
+}
+
+#main-text-6 {
+  padding-bottom: 0.5em;
+}
+
+#sub-text-6 {
+  line-height: 2em;
+}
+
+#main-area-7 {
+  padding: 5em 5em 5em 4.5em;
+}
+
+#text-area-7 {
+  margin-bottom: 3em;
+}
+
+#main-text-7 {
+  margin-right: 20em;
+  margin-bottom: 0.75em;
+}
+
+#sub-text-7 {
+  padding-right: 40em;
+  line-height: 2em;
+}
+
+#images-area-7 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 1em;
+  row-gap: 1em;
+  margin: 0em 1em 0em 1em;
+}
+
+#images-area-7 > * {
+  width: 20m;
+  height: 15em;
+}
+
+#main-area-8 {
+  background-color: #f48471;
+}
+
+#text-area-8 {
+  padding: 10em 20em 2em 5em;
+}
+
+#main-text-8 {
+  color: #ffffff;
+}
+#welcome-socks {
+  width: 60vw;
+  height: 60vh;
 }
