@@ -527,6 +527,7 @@ a {
 .faq-answer {
   color: #ffffff;
   display: none;
+  line-height: 1.5em;
   margin-bottom: 15px;
   padding: 1em;
 }
