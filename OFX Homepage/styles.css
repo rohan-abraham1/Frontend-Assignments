@@ -2,13 +2,10 @@
   font-family: "Rocoleta";
   src: url("./fonts/recoleta-regulardemo.otf") format("opentype");
 }
+
 body {
   font-family: sans-serif;
   margin: 0;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 #header {
@@ -18,7 +15,7 @@ body::-webkit-scrollbar {
   background-color: #ffffff;
 }
 
-#logo {
+#logo-header {
   width: 12em;
   height: 3em;
   padding-top: 10px;
@@ -406,7 +403,7 @@ a {
 }
 
 #text-area-6 {
-  padding: 10em 14em 9em 4em;
+  padding: 10em 10em 9em 4em;
   flex-direction: column;
 }
 
@@ -524,11 +521,11 @@ a {
 .faq-box {
   background-color: #ffffff;
   margin: 1em 0em 1em 0em;
-  padding: 1em 1em 2em 1em;
   border-radius: 5px;
 }
 
 .faq-answer {
+  color: #ffffff;
   display: none;
   margin-bottom: 15px;
   padding: 1em;
@@ -536,7 +533,8 @@ a {
 
 .faq-label {
   display: inline-block;
-  width: 100%;
+  width: 99%;
+  padding: 1em 0em 1em 1em;
 }
 
 #tab1,
@@ -544,13 +542,12 @@ a {
 #tab3,
 #tab4,
 #tab5 {
-  visibility: hidden;
+  display: none;
 }
 
-.faq-box input[type="radio"]:checked + label div {
-  margin-top: 2em;
+.faq-box input[type="radio"]:checked + label + div {
   display: block;
-  background-color: #90ceda;
+  background-color: #74c2d1;
 }
 
 #main-area-10 {
@@ -564,6 +561,7 @@ a {
 
 #main-text-10 {
   margin-bottom: 0.75em;
+  margin-right: 3em;
 }
 
 .sub-text-10 {
@@ -574,7 +572,7 @@ a {
   color: #ee6d57;
   border-bottom: 2px solid #ee6d57;
   padding-bottom: 0.75em;
-  margin-right: 35.5em;
+  width: fit-content;
 }
 
 #view-results:hover {
