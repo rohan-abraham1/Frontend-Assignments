@@ -1,0 +1,30 @@
+#body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 15px;
+  margin: 10% 30% 10% 30%;
+  padding: 5px;
+  background-color: #454545;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+
+#text-box {
+  grid-column: 1/5;
+}
+
+#equals-button {
+  background-color: #f49b34;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  height: 3em;
+  font-size: 20px;
+}
