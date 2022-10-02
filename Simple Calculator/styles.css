@@ -11,10 +11,14 @@
 }
 
 #text-box {
-  grid-column: 1/5;
+  grid-column: 1/4;
 }
 
 #equals-button {
+  background-color: #f49b34;
+}
+
+#clear-button {
   background-color: #f49b34;
 }
 
@@ -26,5 +30,5 @@
   border: 1px solid #000000;
   border-radius: 5px;
   height: 3em;
-  font-size: 20px;
+  font-size: 25px;
 }

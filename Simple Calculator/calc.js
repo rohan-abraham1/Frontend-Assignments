@@ -12,12 +12,29 @@ function equals() {
   }
 }
 
+function Clear() {
+  document.getElementById("text-box").value = "";
+}
+
 function calc(expr) {
   let operands = expr.split(/[^0-9\.]+/);
-  console.log(operands);
+  // console.log(operands);
   let operators = expr.split(/[0-9\.]+/).filter((x) => x);
-  console.log(operators);
-  let value;
+  // console.log(operators);
+  let sum = parseFloat(operands[0]);
+  for (let i = 0; i < operators.length; i++) {
+    if (operators[i] == "-") {
+      sum -= parseFloat(operands[i + 1]);
+    } else if (operators[i] == "*") {
+      sum *= parseFloat(operands[i + 1]);
+    } else if (operators[i] == "/") {
+      sum /= parseFloat(operands[i + 1]);
+    } else {
+      sum += parseFloat(operands[i + 1]);
+    }
+  }
+  // console.log(sum);
+  document.getElementById("text-box").value = sum;
 }
 
 function validate(value) {
@@ -29,14 +46,3 @@ function validate(value) {
     return 1;
   }
 }
-
-// $(document).ready(function () {
-//   regEx = /^\d+$/;
-//   $("#text-box").on("change", function () {
-//     if (regEx.test($(this).val())) {
-//       // Contain numbers only
-//     } else {
-//       alert("Invlaid Input");
-//     }
-//   });
-// });
