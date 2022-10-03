@@ -34,21 +34,41 @@ function Clear() {
 
 function calc(expr) {
   let operands = expr.split(/[^0-9\.]+/);
-  // console.log(operands);
+  console.log(operands);
   let operators = expr.split(/[0-9\.]+/).filter((x) => x);
-  // console.log(operators);
-  let sum = parseFloat(operands[0]);
-  for (let i = 0; i < operators.length; i++) {
-    if (operators[i] == "-") {
-      sum -= parseFloat(operands[i + 1]);
-    } else if (operators[i] == "*") {
-      sum *= parseFloat(operands[i + 1]);
-    } else if (operators[i] == "/") {
-      sum /= parseFloat(operands[i + 1]);
-    } else {
-      sum += parseFloat(operands[i + 1]);
+  console.log(operators);
+  let sum;
+  while (operands.length > 1) {
+    for (let i = 0; i < operators.length; i++) {
+      if (operators[i] == "/") {
+        sum = parseFloat(operands[i]) / parseFloat(operands[i + 1]);
+        operands.splice(i, 2, sum);
+        operators.splice(i, 1);
+      }
+    }
+    for (let i = 0; i < operators.length; i++) {
+      if (operators[i] == "*") {
+        sum = parseFloat(operands[i]) * parseFloat(operands[i + 1]);
+        operands.splice(i, 2, sum);
+        operators.splice(i, 1);
+      }
+    }
+    for (let i = 0; i < operators.length; i++) {
+      if (operators[i] == "-") {
+        sum = parseFloat(operands[i]) - parseFloat(operands[i + 1]);
+        operands.splice(i, 2, sum);
+        operators.splice(i, 1);
+      }
+    }
+    for (let i = 0; i < operators.length; i++) {
+      if (operators[i] == "+") {
+        sum = parseFloat(operands[i]) + parseFloat(operands[i + 1]);
+        operands.splice(i, 2, sum);
+        operators.splice(i, 1);
+      }
     }
   }
+
   // console.log(sum);
   document.getElementById("text-box").value = sum;
   hist.push({
@@ -67,3 +87,13 @@ function validate(value) {
     return 1;
   }
 }
+
+// if (operators[i] == "-") {
+//   sum -= parseFloat(operands[i + 1]);
+// } else if (operators[i] == "*") {
+//   sum *= parseFloat(operands[i + 1]);
+// } else if (operators[i] == "/") {
+//   sum /= parseFloat(operands[i + 1]);
+// } else {
+//   sum += parseFloat(operands[i + 1]);
+// }
