@@ -1,3 +1,5 @@
+const hist = [];
+
 function Click(num) {
   document.getElementById("text-box").value += num;
 }
@@ -10,6 +12,20 @@ function equals() {
   } else {
     return;
   }
+}
+
+function Memory() {
+  let i = 0;
+  // console.log(hist);
+  let memoryList = [];
+  console.log(hist.length);
+  while (i < hist.length) {
+    // console.log(hist[i].input);
+    memoryList += hist[i].input + " = " + hist[i].result + " \n ";
+    i += 1;
+  }
+  // console.log(memoryList);
+  document.getElementById("text-box").value = memoryList;
 }
 
 function Clear() {
@@ -35,6 +51,11 @@ function calc(expr) {
   }
   // console.log(sum);
   document.getElementById("text-box").value = sum;
+  hist.push({
+    input: expr,
+    result: sum,
+  });
+  // console.log(hist);
 }
 
 function validate(value) {

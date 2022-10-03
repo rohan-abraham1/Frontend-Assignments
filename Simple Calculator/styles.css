@@ -11,16 +11,12 @@
 }
 
 #text-box {
-  grid-column: 1/4;
+  grid-column: 1/3;
 }
 
-#equals-button {
+/* #clear-button {
   background-color: #f49b34;
-}
-
-#clear-button {
-  background-color: #f49b34;
-}
+} */
 
 .key {
   display: flex;
@@ -31,4 +27,8 @@
   border-radius: 5px;
   height: 3em;
   font-size: 25px;
+}
+
+.orange-button {
+  background-color: #f49b34;
 }
