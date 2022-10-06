@@ -11,6 +11,18 @@ export class CreateEmployeeComponent implements OnInit {
 
   constructor() {}
 
+  onLoadDataClick(): void {
+    this.employeeForm.setValue({
+      fullName: 'Rohan Abraham',
+      email: 'rabraham@orthofx.com',
+      skills: {
+        skillName: 'Java',
+        experienceInYears: 0,
+        proficiency: 'beginner',
+      },
+    });
+  }
+
   ngOnInit(): void {
     this.employeeForm = new FormGroup({
       fullName: new FormControl(),
