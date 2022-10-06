@@ -41,11 +41,9 @@ export class CreateEmployeeComponent implements OnInit {
         proficiency: ['beginner'],
       }),
     });
-    this.employeeForm
-      .get('fullName')
-      ?.valueChanges.subscribe((value: string) => {
-        this.fullNameLength = value.length;
-      });
+    this.employeeForm.get('skills')?.valueChanges.subscribe((value: any) => {
+      console.log(JSON.stringify(value));
+    });
   }
 
   onSubmit(): void {
