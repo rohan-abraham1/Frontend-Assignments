@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-create-employee',
@@ -8,7 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class CreateEmployeeComponent implements OnInit {
   employeeForm!: FormGroup;
-
+  fullNameLength = 0;
   constructor(private fb: FormBuilder) {}
 
   onLoadDataClick(): void {
@@ -40,6 +41,11 @@ export class CreateEmployeeComponent implements OnInit {
         proficiency: ['beginner'],
       }),
     });
+    this.employeeForm
+      .get('fullName')
+      ?.valueChanges.subscribe((value: string) => {
+        this.fullNameLength = value.length;
+      });
   }
 
   onSubmit(): void {
