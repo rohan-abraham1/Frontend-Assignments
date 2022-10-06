@@ -9,19 +9,10 @@ import { __values } from 'tslib';
 })
 export class CreateEmployeeComponent implements OnInit {
   employeeForm!: FormGroup;
-  fullNameLength = 0;
   constructor(private fb: FormBuilder) {}
 
   onLoadDataClick(): void {
-    this.employeeForm.setValue({
-      fullName: 'Rohan Abraham',
-      email: 'rabraham@orthofx.com',
-      skills: {
-        skillName: 'Java',
-        experienceInYears: 0,
-        proficiency: 'beginner',
-      },
-    });
+    this.logKeyValuePairs(this.employeeForm);
   }
 
   ngOnInit(): void {
@@ -41,9 +32,19 @@ export class CreateEmployeeComponent implements OnInit {
         proficiency: ['beginner'],
       }),
     });
-    this.employeeForm.get('skills')?.valueChanges.subscribe((value: any) => {
-      console.log(JSON.stringify(value));
-    });
+  }
+
+  logKeyValuePairs(group: FormGroup): void {
+    console.log(
+      Object.keys(group.controls).forEach((key: string) => {
+        const abstractControl = group.get(key);
+        if (abstractControl instanceof FormGroup) {
+          this.logKeyValuePairs(abstractControl);
+        } else {
+          console.log('Key = ' + key + 'Value = ' + abstractControl?.value);
+        }
+      })
+    );
   }
 
   onSubmit(): void {
