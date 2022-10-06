@@ -37,3 +37,24 @@
     </div>
   </div>
 </form>
+
+<table border="1">
+  <tr>
+    <th style="padding: 10px">FormGroup</th>
+    <th style="padding: 10px">FormControl (fullName)</th>
+  </tr>
+  <tr>
+    <td style="padding: 10px">
+      touched : {{ employeeForm.touched }} <br />
+      dirty : {{ employeeForm.dirty }} <br />
+      valid : {{ employeeForm.valid }} <br />
+      Form Values : {{ employeeForm.value | json }}
+    </td>
+    <td style="padding: 10px">
+      touched : {{ employeeForm.get("fullName")?.touched }} <br />
+      dirty : {{ employeeForm.get("fullName")?.dirty }} <br />
+      valid : {{ employeeForm.get("fullName")?.valid }} <br />
+      FullName Value : {{ employeeForm.get("fullName")?.value }}
+    </td>
+  </tr>
+</table>
