@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { __values } from 'tslib';
 
 @Component({
@@ -25,6 +25,7 @@ export class CreateEmployeeComponent implements OnInit {
     },
     email: {
       required: 'Email is required',
+      emailDomain: 'Email domain shoudl be Gmail.com',
     },
     phone: {
       required: 'Phone is required',
@@ -60,7 +61,7 @@ export class CreateEmployeeComponent implements OnInit {
         ],
       ],
       contactPreference: ['email',Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, emailDomain]],
       phone: [''],
       skills: this.fb.group({
         skillName: ['', Validators.required],
@@ -117,6 +118,17 @@ export class CreateEmployeeComponent implements OnInit {
 
     console.log(this.employeeForm.controls['fullName'].value);
     console.log(this.employeeForm.get('fullName')?.value);
+  }
+}
+
+function emailDomain (control: AbstractControl): {[key: string]: any} | null{
+  const email: string = control.value;
+  const domain = email.substring(email.lastIndexOf('@')+1);
+  if(domain.toLocaleLowerCase() === 'gmail.com' || email === ''){
+    return null;
+  }
+  else{
+    return {'emailDomain': true};
   }
 }
 
