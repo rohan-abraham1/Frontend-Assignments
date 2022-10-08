@@ -61,7 +61,7 @@ export class CreateEmployeeComponent implements OnInit {
         ],
       ],
       contactPreference: ['email',Validators.required],
-      email: ['', [Validators.required, emailDomain]],
+      email: ['', [Validators.required, emailDomain('gmail.com')]],
       phone: [''],
       skills: this.fb.group({
         skillName: ['', Validators.required],
@@ -121,15 +121,17 @@ export class CreateEmployeeComponent implements OnInit {
   }
 }
 
-function emailDomain (control: AbstractControl): {[key: string]: any} | null{
+function emailDomain(domainName: string) {
+  return (control: AbstractControl): {[key: string]: any} | null => {
   const email: string = control.value;
   const domain = email.substring(email.lastIndexOf('@')+1);
-  if(domain.toLocaleLowerCase() === 'gmail.com' || email === ''){
+  if(domain.toLowerCase() === domainName.toLowerCase() || email === ''){
     return null;
   }
   else{
     return {'emailDomain': true};
   }
+ };
 }
 
 
