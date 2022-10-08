@@ -5,6 +5,8 @@ import {
   Validators,
   AbstractControl,
   ValidationErrors,
+  FormArray,
+  FormControl,
 } from '@angular/forms';
 import { __values } from 'tslib';
 import { CustomValidators } from '../shared/custom.validators';
@@ -19,8 +21,13 @@ export class CreateEmployeeComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   onLoadDataClick(): void {
-    // this.logValidationErrors(this.employeeForm);
-    // console.log(this.formErrors);
+    const formArray1 = this.fb.array([
+      new FormControl('John', Validators.required),
+      new FormControl('IT', Validators.required),
+      new FormControl('', Validators.required),
+    ]);
+
+    console.log(formArray1);
   }
 
   validationMessages = {
