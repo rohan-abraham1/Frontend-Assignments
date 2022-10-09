@@ -93,7 +93,7 @@ export class CreateEmployeeComponent implements OnInit {
         { validators: matchEmails }
       ),
       phone: [''],
-      skills: this.fb.array([this.addSkillFOrmGroup()]),
+      skills: this.fb.array([this.addSkillFormGroup()]),
     });
 
     this.employeeForm
@@ -107,12 +107,20 @@ export class CreateEmployeeComponent implements OnInit {
     });
   }
 
-  addSkillFOrmGroup(): FormGroup {
+  addSkillButtonClick(): void {
+    (<FormArray>this.employeeForm.get('skills')).push(this.addSkillFormGroup());
+  }
+
+  addSkillFormGroup(): FormGroup {
     return this.fb.group({
       skillName: ['', Validators.required],
       experienceInYears: ['', Validators.required],
       proficiency: ['', Validators.required],
     });
+  }
+
+  get skills(): FormArray {
+    return this.employeeForm.get('skills') as FormArray;
   }
 
   onContactPreferenceChange(selectedValue: string) {
