@@ -271,7 +271,13 @@
     </div>
     <div class="panel-footer">
       <div class="btn-toolbar">
-        <button class="btn btn-primary" type="submit">Save</button>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="employeeForm.invalid"
+        >
+          Save
+        </button>
         <button
           class="btn btn-primary"
           type="button"
