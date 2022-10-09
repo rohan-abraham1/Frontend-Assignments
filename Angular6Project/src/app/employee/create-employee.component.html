@@ -141,7 +141,7 @@
         >
           <div [formGroupName]="i">
             <div class="form-group">
-              <label class="col-sm-2 control-label" for="skillName">
+              <label class="col-sm-2 control-label" [for]="'skillName' + i">
                 Skill
               </label>
               <div
@@ -153,7 +153,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="skillName"
+                  [id]="'skillName' + i"
                   placeholder="Name"
                   formControlName="skillName"
                   (blur)="logValidationErrors()"
@@ -162,6 +162,12 @@
                   {{ formErrors.skillName }}
                 </span>
               </div>
+              <label
+                class="col-sm-2 control-label"
+                [for]="'experienceInYears' + i"
+              >
+                Experience In Years
+              </label>
               <div
                 class="col-sm-4"
                 [ngClass]="{ 'has-error': formErrors.experienceInYears }"
@@ -170,6 +176,7 @@
                   type="text"
                   placeholder="Experience in Years"
                   class="form-control"
+                  [id]="'experienceInYears' + i"
                   formControlName="experienceInYears"
                   (blur)="logValidationErrors()"
                 />
@@ -183,11 +190,13 @@
               class="form-group"
               [ngClass]="{ 'has-error': formErrors.proficiency }"
             >
-              <label class="col-md-2 control-label">Proficiency</label>
+              <label class="col-md-2 control-label" [for]="'proficiency' + i"
+                >Proficiency</label
+              >
               <div class="col-md-8">
                 <label class="radio-inline">
                   <input
-                    id="proficiency"
+                    [id]="'proficiency' + i"
                     type="radio"
                     value="beginner"
                     formControlName="proficiency"
