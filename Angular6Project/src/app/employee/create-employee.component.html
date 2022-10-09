@@ -130,6 +130,7 @@
               type="button"
               class="btn btn-primary"
               (click)="addSkillButtonClick()"
+              [disabled]="employeeForm.get('skills')?.invalid"
             >
               Add Skill
             </button>
@@ -139,6 +140,7 @@
           formArrayName="skills"
           *ngFor="let skill of skills.controls; let i = index"
         >
+          <hr *ngIf="i > 0" />
           <div [formGroupName]="i">
             <div class="form-group">
               <label class="col-sm-2 control-label" [for]="'skillName' + i">
