@@ -5,8 +5,8 @@ import {
   Validators,
   AbstractControl,
   ValidationErrors,
-  FormArray,
   FormControl,
+  FormArray,
 } from '@angular/forms';
 import { __values } from 'tslib';
 import { CustomValidators } from '../shared/custom.validators';
@@ -127,6 +127,24 @@ export class CreateEmployeeComponent implements OnInit {
       },
       phone: employee.phone,
     });
+    this.employeeForm.setControl(
+      'skills',
+      this.setExistingSkills(employee.skills)
+    );
+  }
+
+  setExistingSkills(skillSets: ISkill[]): FormArray {
+    const formArray = new FormArray(<any>[]);
+    skillSets.forEach((s) => {
+      formArray.push(
+        this.fb.group({
+          skillName: s.skillName,
+          experienceInYears: s.experienceInYears,
+          proficiency: s.proficiency,
+        })
+      );
+    });
+    return formArray;
   }
 
   addSkillButtonClick(): void {
@@ -146,7 +164,10 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   removeSkillButtonClick(skillGroupIndex: number): void {
-    (<FormArray>this.employeeForm.get('skills')).removeAt(skillGroupIndex);
+    const skillsFormArray = <FormArray>this.employeeForm.get('skills');
+    skillsFormArray.removeAt(skillGroupIndex);
+    skillsFormArray.markAsDirty();
+    skillsFormArray.markAsTouched();
   }
 
   onContactPreferenceChange(selectedValue: string) {
@@ -163,7 +184,6 @@ export class CreateEmployeeComponent implements OnInit {
     Object.keys(group.controls).forEach((key: string) => {
       const abstractControl = group.get(key);
 
-      console.log(abstractControl);
       (this.formErrors as any)[key] = '';
       if (
         abstractControl &&
