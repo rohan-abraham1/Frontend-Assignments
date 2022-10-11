@@ -2,20 +2,20 @@
   "employees": [
     {
       "id": 1,
-      "fullName": "Mark",
-      "contactPreference": "email",
-      "email": "mark@email.com",
-      "phone": "5641238971",
+      "fullName": "Mark five",
+      "contactPreference": "phone",
+      "email": "mark@gmail.com",
+      "phone": "22222222222",
       "skills": [
         {
           "skillName": "C#",
-          "experienceInYears": 1,
-          "proficiency": "beginner"
+          "experienceInYears": "2",
+          "proficiency": "advanced"
         },
         {
           "skillName": "Java",
-          "experienceInYears": 2,
-          "proficiency": "intermediate"
+          "experienceInYears": "2",
+          "proficiency": "advanced"
         }
       ]
     },
