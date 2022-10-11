@@ -2,20 +2,20 @@
   "employees": [
     {
       "id": 1,
-      "fullName": "Mark five",
-      "contactPreference": "phone",
+      "fullName": "Mark",
+      "contactPreference": "email",
       "email": "mark@gmail.com",
-      "phone": "22222222222",
+      "phone": "5641238971",
       "skills": [
         {
           "skillName": "C#",
-          "experienceInYears": "2",
-          "proficiency": "advanced"
+          "experienceInYears": 1,
+          "proficiency": "beginner"
         },
         {
           "skillName": "Java",
-          "experienceInYears": "2",
-          "proficiency": "advanced"
+          "experienceInYears": 2,
+          "proficiency": "intermediate"
         }
       ]
     },
@@ -23,8 +23,8 @@
       "id": 2,
       "fullName": "John",
       "contactPreference": "phone",
-      "email": "john@email.com",
-      "phone": "3242138971",
+      "email": "john@gmail.com",
+      "phone": "3242133453",
       "skills": [
         {
           "skillName": "Angular",
@@ -33,7 +33,7 @@
         },
         {
           "skillName": "HTML",
-          "experienceInYears": 2,
+          "experienceInYears": "3",
           "proficiency": "intermediate"
         },
         {
@@ -42,6 +42,20 @@
           "proficiency": "advanced"
         }
       ]
+    },
+    {
+      "fullName": "Rohan",
+      "contactPreference": "email",
+      "email": "rabraham.ofx+3@gmail.com",
+      "phone": "(254) 984-6621",
+      "skills": [
+        {
+          "skillName": "C#",
+          "experienceInYears": "2",
+          "proficiency": "beginner"
+        }
+      ],
+      "id": 3
     }
   ]
 }
