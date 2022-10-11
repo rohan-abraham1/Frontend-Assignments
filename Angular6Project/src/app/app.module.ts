@@ -8,9 +8,11 @@ import { AppComponent } from './app.component';
 import { CreateEmployeeComponent } from './employee/create-employee.component';
 import { ListEmployeeComponent } from './employee/list-employee.component';
 import { EmployeeService } from './employee/employee.service';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, CreateEmployeeComponent, ListEmployeeComponent],
+  declarations: [AppComponent, CreateEmployeeComponent, ListEmployeeComponent, HomeComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
