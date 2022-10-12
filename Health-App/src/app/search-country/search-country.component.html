@@ -1,1 +1,5 @@
-<p>search-country works!</p>
+<div *ngFor="let country of listOfCountries">
+  <div class="country" (click)="clickCountry(country.Country)">
+    {{ country.Country }}
+  </div>
+</div>

@@ -1,0 +1,28 @@
+#home-main-area {
+  margin: 100px 200px 100px 200px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-card {
+  border: 2px solid #000000;
+  border-radius: 5px;
+  background-color: grey;
+  padding: 10px;
+  margin: 20px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.value {
+  color: crimson;
+  font-size: 30px;
+  font-weight: bold;
+}
