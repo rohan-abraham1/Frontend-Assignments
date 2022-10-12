@@ -13,7 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, PageNotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, EmployeeModule],
+  imports: [BrowserModule, HttpClientModule, EmployeeModule, AppRoutingModule],
   providers: [EmployeeService],
   bootstrap: [AppComponent],
 })
