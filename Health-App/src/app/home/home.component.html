@@ -1,38 +1,69 @@
+<div class="home-title">{{ pageTitle }}</div>
 <div id="home-main-area">
   <div class="summary-card flex">
     <div>
-      New Confirmed:
-      <div class="value">{{ summaryData.NewConfirmed }}</div>
+      Today's Confirmed Cases:
+      <div class="value" *ngIf="flagCountry == 0">
+        {{ globalSummaryData.NewConfirmed }}
+      </div>
+      <div class="value" *ngIf="flagCountry != 0">
+        {{ countrySummaryData.NewConfirmed }}
+      </div>
+    </div>
+  </div>
+  <div class="summary-card flex" *ngIf="flagCountry == 0">
+    <div>
+      Total Confirmed Cases:
+      <div class="value" *ngIf="flagCountry == 0">
+        {{ globalSummaryData.TotalConfirmed }}
+      </div>
+      <div class="value" *ngIf="flagCountry != 0">
+        {{ countrySummaryData.TotalConfirmed }}
+      </div>
     </div>
   </div>
   <div class="summary-card flex">
     <div>
-      Total Confirmed:
-      <div class="value">{{ summaryData.TotalConfirmed }}</div>
+      Today's Deaths:
+      <div class="value" *ngIf="flagCountry == 0">
+        {{ globalSummaryData.NewDeaths }}
+      </div>
+      <div class="value" *ngIf="flagCountry != 0">
+        {{ countrySummaryData.NewDeaths }}
+      </div>
     </div>
   </div>
-  <div class="summary-card flex">
-    <div>
-      New Deaths:
-      <div class="value">{{ summaryData.NewDeaths }}</div>
-    </div>
-  </div>
-  <div class="summary-card flex">
+  <div class="summary-card flex" *ngIf="flagCountry == 0">
     <div>
       Total Deaths:
-      <div class="value">{{ summaryData.TotalDeaths }}</div>
+      <div class="value" *ngIf="flagCountry == 0">
+        {{ globalSummaryData.TotalDeaths }}
+      </div>
+      <div class="value" *ngIf="flagCountry != 0">
+        {{ countrySummaryData.TotalDeaths }}
+      </div>
     </div>
   </div>
   <div class="summary-card flex">
     <div>
-      New Recovered:
-      <div class="value">{{ summaryData.NewRecovered }}</div>
+      Today's Recovery:
+      <div class="value" *ngIf="flagCountry == 0">
+        {{ globalSummaryData.NewRecovered }}
+      </div>
+      <div class="value" *ngIf="flagCountry != 0">
+        {{ countrySummaryData.NewRecovered }}
+      </div>
     </div>
   </div>
-  <div class="summary-card flex">
+  <div class="summary-card flex" *ngIf="flagCountry == 0">
     <div>
-      Total Recovered:
-      <div class="value">{{ summaryData.TotalRecovered }}</div>
+      Total Recovery:
+      <div class="value" *ngIf="flagCountry == 0">
+        {{ globalSummaryData.TotalRecovered }}
+      </div>
+      <div class="value" *ngIf="flagCountry != 0">
+        {{ countrySummaryData.TotalRecovered }}
+      </div>
     </div>
   </div>
 </div>

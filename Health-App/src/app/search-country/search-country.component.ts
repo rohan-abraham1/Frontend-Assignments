@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryService } from '../services/country.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-country',
@@ -9,7 +10,7 @@ import { CountryService } from '../services/country.service';
 export class SearchCountryComponent implements OnInit {
   listOfCountries: ICountries[] = [];
 
-  constructor(private _country: CountryService) {}
+  constructor(private _country: CountryService, private _router: Router) {}
 
   ngOnInit(): void {
     this._country
@@ -17,7 +18,9 @@ export class SearchCountryComponent implements OnInit {
       .subscribe((listOfCountries) => (this.listOfCountries = listOfCountries));
   }
 
-  clickCountry(countryName: string) {}
+  clickCountry(countryName: string) {
+    this._router.navigate(['country', countryName]);
+  }
 }
 
 interface ICountries {

@@ -1,5 +1,11 @@
-<div *ngFor="let country of listOfCountries">
-  <div class="country" (click)="clickCountry(country.Country)">
-    {{ country.Country }}
+<div>
+  <div class="country">
+    <div
+      class="country-tile flex"
+      *ngFor="let country of listOfCountries"
+      (click)="clickCountry(country.Country)"
+    >
+      {{ country.Country }}
+    </div>
   </div>
 </div>
