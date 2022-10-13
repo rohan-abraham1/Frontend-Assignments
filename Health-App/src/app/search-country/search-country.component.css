@@ -4,17 +4,24 @@
 
 .country {
   display: grid;
+  background-color: #fdf4e3;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  gap: 2px;
   flex-wrap: wrap;
 }
 .country-tile {
   justify-content: center;
   align-items: center;
-  background-color: rgb(165, 165, 196);
+  border: 1px solid #fdf4e3;
+  font-size: 18px;
   width: 180px;
   height: 60px;
   margin: 10px;
-  border-radius: 8px;
   cursor: pointer;
+}
+
+.country-tile:hover {
+  color: #032c58;
+  border: 1px solid #032c58;
+  border-radius: 10px;
 }

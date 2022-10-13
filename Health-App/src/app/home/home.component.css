@@ -1,17 +1,31 @@
-#home-main-area {
-  margin: 50px 200px 100px 200px;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(2, 1fr);
+.body {
+  background-color: #fdf4e3;
+  min-height: 583px;
 }
 
-.home-title {
-  color: skyblue;
+#home-main-area {
+  margin: 50px 50px 0px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.heading {
+  color: #203a55;
   font-size: 30px;
   font-weight: bold;
   display: flex;
-  justify-content: center;
-  margin-top: 50px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 50px 0px 0px 70px;
+}
+
+.page-title {
+  padding-top: 15px;
+  font-size: 50px;
+}
+
+.page-heading {
+  font-size: 20px;
 }
 
 .flex {
@@ -21,17 +35,80 @@
 }
 
 .summary-card {
-  border: 2px solid #000000;
   border-radius: 5px;
-  background-color: grey;
-  padding: 10px;
+  padding: 25px;
   margin: 20px;
   color: #ffffff;
-  font-size: 20px;
 }
 
-.value {
-  color: crimson;
-  font-size: 30px;
+#card {
+  background-color: #ffffff;
+}
+
+.value-text {
+  color: #203a55;
+}
+
+.value-1 {
+  color: #203a55;
+  font-size: 40px;
+  padding-bottom: 10px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.value-2 {
+  color: #db1d07;
+  font-size: 40px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.value-3 {
+  color: #8cb239;
+  font-size: 40px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.calender-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.search-icon {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+::ng-deep .mat-calender-table {
+  align-items: center;
+}
+::ng-deep .mat-form-field-wrapper {
+  background-color: #ee742c;
+  border-radius: 12px;
+}
+
+::ng-deep .mat-focus-indicator {
+  background-color: #a7490e;
+  color: white;
+}
+::ng-deep
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  background-color: #f65f4e;
+}
+
+::ng-deep .mat-calendar-body-selected {
+  background-color: #a6a6a6;
+}
+
+::ng-deep .mat-date-range-input-inner {
+  color: #ffffff;
 }

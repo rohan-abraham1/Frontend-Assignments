@@ -17,4 +17,14 @@ export class CountryService {
   getSummary(): Observable<any> {
     return this.httpClient.get(`${this.baseURL}/summary`);
   }
+
+  getFilteredDate(
+    countryName: string,
+    startDate: string,
+    endDate: string
+  ): Observable<any> {
+    return this.httpClient.get(
+      `${this.baseURL}/country/${countryName}?from=${startDate}T00:00:00Z&to=${endDate}T00:00:00Z`
+    );
+  }
 }
