@@ -1,4 +1,4 @@
-.flex {
+/* .flex {
   display: flex;
 }
 
@@ -24,4 +24,20 @@
   color: #032c58;
   border: 1px solid #032c58;
   border-radius: 10px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+} */
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

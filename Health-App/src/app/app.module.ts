@@ -16,6 +16,8 @@ import { DatePipe } from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CountryDetailsComponent } from './country-details/country-details.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { CountryDetailsComponent } from './country-details/country-details.compo
     ReactiveFormsModule,
     MatNativeDateModule,
     MatPaginatorModule,
+    MatAutocompleteModule,
+    MatInputModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],
