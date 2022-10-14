@@ -1,37 +1,39 @@
-<div class="flex-center">
-  <form class="example-form">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Enter Country Name</mat-label>
-      <input
-        type="text"
-        matInput
-        [formControl]="myControl"
-        [matAutocomplete]="auto"
-      />
-      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-        <mat-option
-          *ngFor="let option of filteredOptions | async"
-          [value]="option"
-        >
-          {{ option.name }}
-        </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
-  </form>
-  <img
-    class="search-icon"
-    src="https://images.squarespace-cdn.com/content/v1/5ceec72c0700360001f38f8e/1629735187754-YOH6MWD3P5C237T1B67M/WhyOpkalla_Icons-01.png"
-    alt=""
-    (click)="clickCountry()"
-  />
+<div class="body">
+  <div class="flex-center">
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter Country Name</mat-label>
+        <input
+          type="text"
+          matInput
+          [formControl]="myControl"
+          [matAutocomplete]="auto"
+        />
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+          <mat-option
+            *ngFor="let option of filteredOptions | async"
+            [value]="option"
+          >
+            {{ option.name }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+    <img
+      class="search-icon"
+      src="https://images.squarespace-cdn.com/content/v1/5ceec72c0700360001f38f8e/1629735187754-YOH6MWD3P5C237T1B67M/WhyOpkalla_Icons-01.png"
+      alt=""
+      (click)="clickCountry()"
+    />
+  </div>
 </div>
-
-<!-- <div>
+<!-- 
+<div>
   <div class="country">
     <div
       class="country-tile flex"
       *ngFor="let country of listOfCountries; let i = index"
-      (click)="clickCountry(country.Country)"
+      (click)="selectCountry(country.Country)"
     >
       {{ country.Country }}
     </div>

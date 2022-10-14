@@ -50,7 +50,6 @@ export class SearchCountryComponent implements OnInit {
     this.countryName = this.myControl.value;
     let name = this.countryName.name;
     console.log(name);
-
     this._router.navigate(['country', name]);
   }
 }

@@ -41,3 +41,28 @@
   align-items: center;
   justify-content: center;
 }
+
+.body {
+  background-color: #fdf4e3;
+  min-height: 583px;
+  padding-top: 100px;
+}
+
+.search-icon {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+/* 
+::ng-deep .mat-calender-table {
+  align-items: center;
+} */
+::ng-deep .mat-form-field-wrapper {
+  background-color: #ee742c;
+  border-radius: 12px;
+}
+
+::ng-deep .mat-focus-indicator {
+  background-color: #a7490e;
+  color: white;
+}
