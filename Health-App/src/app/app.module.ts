@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { CountryDetailsComponent } from './country-details/country-details.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     SearchCountryComponent,
     HomeComponent,
     PageNotFoundComponent,
+    CountryDetailsComponent,
   ],
   imports: [
     BrowserModule,

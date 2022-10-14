@@ -75,3 +75,40 @@
   display: flex;
   justify-content: center;
 }
+
+.calender-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.search-icon {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+::ng-deep .mat-calender-table {
+  align-items: center;
+}
+::ng-deep .mat-form-field-wrapper {
+  background-color: #ee742c;
+  border-radius: 12px;
+}
+
+::ng-deep .mat-focus-indicator {
+  background-color: #a7490e;
+  color: white;
+}
+::ng-deep
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  background-color: #f65f4e;
+}
+
+::ng-deep .mat-calendar-body-selected {
+  background-color: #a6a6a6;
+}
+
+::ng-deep .mat-date-range-input-inner {
+  color: #ffffff;
+}
