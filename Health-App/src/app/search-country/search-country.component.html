@@ -26,16 +26,15 @@
       (click)="clickCountry()"
     />
   </div>
-</div>
-<!-- 
-<div>
-  <div class="country">
-    <div
-      class="country-tile flex"
-      *ngFor="let country of listOfCountries; let i = index"
-      (click)="selectCountry(country.Country)"
-    >
-      {{ country.Country }}
+  <div>
+    <div class="country">
+      <div
+        class="country-tile flex"
+        *ngFor="let country of options"
+        (click)="selectCountry(country.name)"
+      >
+        {{ country.name }}
+      </div>
     </div>
   </div>
-</div> -->
+</div>

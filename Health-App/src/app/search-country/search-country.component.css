@@ -1,4 +1,4 @@
-/* .flex {
+.flex {
   display: flex;
 }
 
@@ -34,7 +34,7 @@
 
 .example-full-width {
   width: 100%;
-} */
+}
 
 .flex-center {
   display: flex;
@@ -53,10 +53,7 @@
   width: 60px;
   cursor: pointer;
 }
-/* 
-::ng-deep .mat-calender-table {
-  align-items: center;
-} */
+
 ::ng-deep .mat-form-field-wrapper {
   background-color: #ee742c;
   border-radius: 12px;

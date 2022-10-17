@@ -7,6 +7,9 @@ import { option } from '../model/model.search';
 
 export interface User {
   name: string;
+  Country?: string;
+  ISO2?: string;
+  Slug?: string;
 }
 
 @Component({
@@ -25,6 +28,9 @@ export class SearchCountryComponent implements OnInit {
   constructor(private _country: CountryService, private _router: Router) {}
 
   ngOnInit(): void {
+    this._country.getCountries().subscribe((listOfCountries) => {
+      this.listOfCountries = listOfCountries;
+    });
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       map((value) => {
@@ -49,7 +55,10 @@ export class SearchCountryComponent implements OnInit {
   clickCountry() {
     this.countryName = this.myControl.value;
     let name = this.countryName.name;
-    console.log(name);
+    this._router.navigate(['country', name]);
+  }
+
+  selectCountry(name?: string) {
     this._router.navigate(['country', name]);
   }
 }
